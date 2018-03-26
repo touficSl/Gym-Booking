@@ -1,0 +1,236 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="~/Controller/MasterPage.master.cs" Inherits="View_MasterPage" %>
+
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Basic -->
+		<meta charset="utf-8">
+		<title>Dance</title>
+		<meta name="keywords" content="HTML5 Template" />  
+		<!-- Mobile Specific Metas -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- External Plugins CSS -->
+		<link rel="stylesheet" href="JS_CSS/external/slick/slick.css">
+		<link rel="stylesheet" href="JS_CSS/external/slick/slick-theme.css">
+		<link rel="stylesheet" href="JS_CSS/external/magnific-popup/magnific-popup.css">
+		<link rel="stylesheet" href="JS_CSS/external/bootstrap-select/bootstrap-select.css">	
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="JS_CSS/css/style.css">
+		<!-- Icon Fonts  -->
+		<link rel="stylesheet" href="JS_CSS/font/style.css">
+		<!-- Head Libs -->
+		<!-- Modernizr -->
+		<script src="JS_CSS/external/modernizr/modernizr.js"></script>
+        <style>
+            header .mainMenu .navbar-nav > li > a .act-underline:before {
+                background-color:red !important;
+            }
+            .back-to-top {
+                background-color: red;
+            }
+            .v-links-list a {
+                color: red;
+            }
+            .title-under:after {
+                background: red;
+            }
+            #loader .dot {
+                background-color: red;
+            }
+            table th{
+                padding:15px;
+            }
+            table td{
+                padding:15px;
+            }
+            .btn {
+              font: bold 11px calibri;
+              text-decoration: none;
+              background-color: #EEEEEE;
+              color: #333333;
+              padding: 3px 7px 3px 7px;
+              border-top: 1px solid #CCCCCC;
+              border-right: 1px solid #333333;
+              border-bottom: 1px solid #333333;
+              border-left: 1px solid #CCCCCC;
+              color:white;
+              background-color:red;
+            } 
+        </style>
+	</head>
+	<body class="index"> 
+		<!-- Back to top -->
+	    <div class="back-to-top"><span class="icon-keyboard_arrow_up"></span></div>
+	    <!-- /Back to top -->
+
+        <!-- mobile menu -->
+		<div class="hidden">
+			<nav id="off-canvas-menu">				
+				<ul class="expander-list">				
+					<li class="dropdown dropdown-mega-menu">											
+						<a href="Home.aspx" class="dropdown-toggle" data-toggle="dropdown"><span class="act-underline">HOME</span></a>
+					</li>																		
+					<li class="dropdown dropdown-mega-menu" id="myprog1" runat="server">
+						<span class="dropdown-toggle extra-arrow"></span>
+						<a href="MyPrograms.aspx" class="dropdown-toggle" data-toggle="dropdown"><span class="act-underline">MY PROGRAMS</span></a>
+					</li>		
+					<li class="dropdown dropdown-mega-menu">
+						<span class="dropdown-toggle extra-arrow"></span>
+						<a href="ContactUs.aspx" class="dropdown-toggle" data-toggle="dropdown"><span class="act-underline">CONTACT US</span></a>
+					</li>										
+					<li class="dropdown dropdown-mega-menu">
+						<span class="dropdown-toggle extra-arrow"></span>
+						<a href="AboutUs.aspx" class="dropdown-toggle" data-toggle="dropdown"><span class="act-underline">ABOUT US</span></a>
+					</li>										
+					<li class="dropdown dropdown-mega-menu" id="myprof1" runat="server">
+						<span class="dropdown-toggle extra-arrow"></span>
+						<a href="MyProfile.aspx" class="dropdown-toggle" data-toggle="dropdown"><span class="act-underline">MY PROFILE</span></a>
+					</li>	
+                </ul>
+            </nav>
+        </div>
+        <!-- mobile menu -->
+	    
+		<!-- HEADER section -->
+		<div class="header-wrapper " style="margin-right:50px">
+			<header id="header" >
+				<div >
+					<div class="row">
+						<div class="col-sm-4 col-md-4 col-lg-6 col-xl-7">
+							<!-- logo start --> 
+							<a href="Home.aspx"><img class="logo replace-2x img-responsive" style="margin-left:10px" src="images/Logo.jpg" alt=""/> </a> 
+							<!-- logo end --> 
+						</div>
+						<div class="col-sm-8 col-md-8 col-lg-6 col-xl-5 text-right">
+							<!-- slogan start -->
+							<div class="slogan" runat="server" id="welc"  style="color:red"> </div>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <a class="slogan" runat="server" id="logout" style="color:red" onserverclick="logout_ServerClick">LOG OUT</a>
+							<!-- slogan end --> 						
+						</div>
+					</div>
+				</div>
+				<div class="stuck-nav">
+					<div class="offset-top-5">
+						<div class="row">
+							<div class="pull-left col-sm-9 col-md-9 col-lg-10">
+								<!-- navigation start -->
+								<nav class="navbar">
+									<div class="mainMenu">									
+										<ul class="nav navbar-nav">
+											<li class="dropdown dropdown-mega-menu">											
+												<a href="Home.aspx" ><span class="act-underline">HOME</span></a>
+											</li>																			
+					                        <li class="dropdown dropdown-mega-menu">
+						                        <a href="MyPrograms.aspx"  id="myprog2" runat="server"><span class="act-underline">MY PROGRAMS</span></a>
+					                        </li>										
+											<li class="dropdown dropdown-mega-menu">
+												<span class="dropdown-toggle extra-arrow"></span>
+												<a href="ContactUs.aspx" ><span class="act-underline">CONTACT US</span></a>
+											</li>										
+											<li class="dropdown dropdown-mega-menu">
+												<span class="dropdown-toggle extra-arrow"></span>
+												<a href="AboutUs.aspx" ><span class="act-underline">ABOUT US</span></a>
+											</li>								
+											<li class="dropdown dropdown-mega-menu">
+												<span class="dropdown-toggle extra-arrow"></span>
+												<a href="MyProfile.aspx"  id="myprof2" runat="server"><span class="act-underline">MY PROFILE</span></a>
+											</li>
+										</ul>
+									</div>
+								</nav>
+							</div>
+							<!-- navigation end -->
+						</div>
+					</div>
+				</div>
+			</header>
+		</div>
+		<!-- End HEADER section --> 
+
+
+        <form runat ="server">
+            <asp:ScriptManager runat="server"/>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server">
+                             
+            </asp:ContentPlaceHolder>
+        </form>
+
+
+		<!-- FOOTER section -->
+		<footer>
+			<!-- footer-data -->
+			<div class="container inset-bottom-60">
+				<div class="row" >
+					<div class="col-sm-12 col-md-5 col-lg-6 border-sep-right">
+						<div class="box-about">
+							<div class="mobile-collapse">
+								<h4 class="mobile-collapse__title visible-xs">ABOUT US</h4>
+								<div class="mobile-collapse__content">
+									<p>A health club (also known as a fitness club, fitness centre, health spa, and commonly referred to as a gym) is a place which houses exercise equipment for the purpose of physical exercise.</p>
+								</div>
+							</div>
+						</div> 
+					</div>
+					<div class="col-sm-12 col-md-7 col-lg-6 border-sep-left">
+						<div class="row">
+							<div class="col-sm-4">
+								<div class="mobile-collapse">
+									<h4 class="text-left  title-under  mobile-collapse__title">INFORMATION</h4>
+									<div class="v-links-list mobile-collapse__content">
+										<ul>
+											<li><a href="AboutUs.aspx">About Us</a></li> 
+											<li><a href="ContactUs.aspx">Contact Us</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>  
+                            <div class="col-sm-4" id="myprof" runat="server">
+						        <div class="mobile-collapse">
+							        <h4 class="text-left  title-under  mobile-collapse__title">MY ACCOUNT</h4>
+							        <div class="v-links-list mobile-collapse__content">
+								        <ul>
+									        <li><a href="MyProfile.aspx">My Profile</a></li>
+								        </ul>
+							        </div>
+						        </div>
+					        </div>
+						</div>
+					</div> 
+				</div>
+			</div>
+			<!-- /footer-data --> 
+			<div class="divider divider-md visible-xs visible-sm visible-md"></div>
+			<a href="#" class="btn btn--ys btn--full visible-xs" id="backToTop">Back to top <span class="icon icon-expand_less"></span></a> 
+		</footer>
+		<!-- END FOOTER section -->		
+
+		<!-- jQuery 1.10.1--> 
+		<script src="JS_CSS/external/jquery/jquery-2.1.4.min.js"></script> 
+		<!-- Bootstrap 3--> 
+		<script src="JS_CSS/external/bootstrap/bootstrap.min.js"></script> 
+		<!-- Specific Page External Plugins --> 
+		<script src="JS_CSS/external/slick/slick.min.js"></script>
+		<script src="JS_CSS/external/bootstrap-select/bootstrap-select.min.js"></script>  
+		<script src="JS_CSS/external/countdown/jquery.plugin.min.js"></script> 
+		<script src="JS_CSS/external/countdown/jquery.countdown.min.js"></script>  		
+		<script src="JS_CSS/external/instafeed/instafeed.min.js"></script>  		
+		<script src="JS_CSS/external/magnific-popup/jquery.magnific-popup.min.js"></script>  		
+		<script src="JS_CSS/external/isotope/isotope.pkgd.min.js"></script> 
+		<script src="JS_CSS/external/imagesloaded/imagesloaded.pkgd.min.js"></script>
+		<script src="JS_CSS/external/colorbox/jquery.colorbox-min.js"></script>
+		<script src="JS_CSS/external/parallax/jquery.parallax-1.1.3.js"></script>		
+		<!-- Custom --> 
+		<script src="JS_CSS/js/custom.js"></script>			
+		<script>
+            //function RedirectNewWindow(Url) {
+            //    window.open(Url, '_newtab');
+            //}
+            function Redirect(Url) {
+                window.location.assign(Url);
+            }
+    </script>
+	</body>
+</html>
+
