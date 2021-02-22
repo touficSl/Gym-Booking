@@ -1,2 +1,5 @@
-# Gym-Booking
-Gym Booking System
+# Gym Booking Management
+
+## Languages Used
+ - C# Windows application
+ - Html5, CSS, Bootstrap
